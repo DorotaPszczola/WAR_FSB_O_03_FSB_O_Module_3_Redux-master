@@ -10,15 +10,15 @@ const users = (state = initUser, action) => {
     switch (action.type) {
         case ADD_ARTICLE:
             const id = action.payload.userId
-            const copy = {...state};
-            copy[id] = copy[id] +1
+            const copy = { ...state };
+            copy[id] = copy[id] + 1
             return copy;
         case ADD_USER:
             return {
                 ...state,
                 [action.user]: 0
             }
-    
+
         default:
             return state;
     }
@@ -30,7 +30,7 @@ const articles = (state = articlesInit, action) => {
     switch (action.type) {
         case ADD_ARTICLE:
             return ([...state, action.payload.title])
-    
+
         default:
             return state;
     }
@@ -38,6 +38,6 @@ const articles = (state = articlesInit, action) => {
 
 
 export default combineReducers({
-  users,
-  articles
+    users,
+    articles
 });

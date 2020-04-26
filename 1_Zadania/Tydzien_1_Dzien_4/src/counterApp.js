@@ -16,7 +16,7 @@ export default function () {
   // tworzymy action creator w katalogu actions
 
   const store = createStore(reducer);
-  const check = () => console.log("counterApp: " +store.getState());
+  const check = () => console.log("counterApp: " + store.getState());
   store.subscribe(check);
   store.dispatch(increment(5));  //dispacherem uruchamiamy 
   store.dispatch(decrement(2));

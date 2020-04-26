@@ -1,4 +1,5 @@
 import React from "react";
+import store from "../redux/store";
 
 const Counter = ({value, increment, decrement}) => (
   <div>
