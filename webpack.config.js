@@ -1,6 +1,6 @@
 const path = require("path");
-const entryPath = "1_Zadania/Tydzien_1_Dzien_2";
-const entryFile = "task02.js";
+const entryPath = "1_Zadania/Tydzien_1_Dzien_5";
+const entryFile = "index.js";
 
 module.exports = {
   entry: `./${entryPath}/src/${entryFile}`,

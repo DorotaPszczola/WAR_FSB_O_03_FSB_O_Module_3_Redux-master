@@ -3,7 +3,7 @@
  * Implementacja własnego Store
  */
 
-function createStore(reducerFunction, initialState) {
+const createStore = (reducerFunction, initialState) => {
     let currentState = initialState;
     let listeners = [];
 

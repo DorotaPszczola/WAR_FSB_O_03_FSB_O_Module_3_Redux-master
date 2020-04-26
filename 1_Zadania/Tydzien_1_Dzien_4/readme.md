@@ -60,7 +60,7 @@ from subscribe 3
 ## Zadania do samodzielnego wykonania
 
 ### Zadanie 1 - Zamiana własnego store na store z reduxa
-Po implementacji zadania spróbuj zmienić funkcję tworzącą store na tą z biblioteki `redux`. Czy widać różnicę?
+Po implementacji zadania spróbuj zmienić funkcję tworzącą store na tą z biblioteki `redux`. Czy widać różnicę? //czyli zmienić import z pliku na import z "redux" w counterApp.js:2
 
 ---
 
