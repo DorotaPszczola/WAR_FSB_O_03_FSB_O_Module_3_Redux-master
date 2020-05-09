@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import {
-    QUOTE_FETCHING, QUOTE_FETCHED, QUOTE_ERROR,
+    QUOTE_FETCHING, QUOTE_FETCHED, QUOTE_ERROR, ADD_FAV,
     startFetching, quoteFetched, quoteError
 } from "./actions"
 
@@ -11,22 +11,35 @@ const initState = {
     quote: null
 }
 
-const quote = (state = initState, { loading, error, quote }) => {
+const quote = (state = initState, action) => {
     switch (action.type) {
         case QUOTE_FETCHING:
-
             return {
+                ...state,
                 loading: true,
-
             };
         case QUOTE_FETCHED:
 
             return {
-
-                quote: quote.push(...quote, quote)
+                ...state,
+                quote: action.response,
+                loading: false,
             };
         case QUOTE_ERROR:
-            return { error: error };
+            return {
+                ...state,
+                loading: false,
+                error: action.error
+            };
+        default:
+            return state;
+    }
+}
+// let favs = [];
+const favourites = (state = [], action) => {
+    switch (action.type) {
+        case ADD_FAV:
+            return [...state, action.quote];
         default:
             return state;
     }
@@ -34,4 +47,5 @@ const quote = (state = initState, { loading, error, quote }) => {
 
 export default combineReducers({
     quote,
+    favourites
 });

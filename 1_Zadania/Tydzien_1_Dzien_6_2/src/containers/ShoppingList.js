@@ -10,7 +10,7 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
     addProduct: (product) => dispatch(addProduct(product)),
-    changeOrder: (index, direction) => dispatch(changeOrder(index, direction))
+    changeOrder: (index, direction) => dispatch(changeOrder(index, direction)),
 })
 
 

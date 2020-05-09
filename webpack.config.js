@@ -1,5 +1,5 @@
 const path = require("path");
-const entryPath = "1_Zadania/Tydzien_2_Dzien_1_i_Dzien_2/1_async";
+const entryPath = "1_Zadania/Tydzien_2_Dzien_1_i_Dzien_2/2_rocket";
 const entryFile = "index.js";
 
 module.exports = {
